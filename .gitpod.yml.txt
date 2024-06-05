@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: ./download_spark.sh
+    command: zeppelin-daemon.sh start
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+    description: Zeppelin
